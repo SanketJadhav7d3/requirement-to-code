@@ -1,9 +1,11 @@
 # requirements-to-code
 
-Fine-tune a small, self-hostable open-source code model (LoRA on
-[Qwen2.5-Coder-0.5B](https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B)) to turn a
+Fine-tune a small, self-hostable open-source model (LoRA on
+[Qwen2.5-0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B)) to turn a
 natural-language **requirement** into a Python function — then **verify** each
 generation by running it against assert-based tests in an isolated subprocess.
+(Swap in the code-specialized [Qwen2.5-Coder-0.5B](https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B)
+via `config.py` for a stronger — but already near-ceiling — baseline.)
 
 The point isn't a big model. It's the full loop, done honestly and locally:
 select a base model → LoRA fine-tune with an explicit PyTorch training loop →
@@ -26,7 +28,7 @@ you'd gate generated code in a real requirement-driven workflow.
 | `data.py` | Loads an instruction→code dataset; fixes the prompt format |
 | `train.py` | Hand-written PyTorch LoRA training loop (no `Trainer`) |
 | `evaluate.py` | Generates, runs tests in a sandboxed subprocess, scores pass@1 |
-| `eval_problems.json` | 8 held-out requirements + tests |
+| `eval_problems.json` | 24 held-out requirements + tests |
 | `results.md` | Before/after table to fill in |
 
 ## Quickstart
@@ -76,7 +78,7 @@ The code is cross-platform — the same three commands work in PowerShell or
 
 ## Honest limitations
 
-Greedy `pass@1` on 8 toy problems is a smoke test, not a benchmark. The prompt
+Greedy `pass@1` on 24 toy problems is a smoke test, not a benchmark. The prompt
 tokens aren't masked from the loss (a known refinement). A 0.5B model will still
 miss the harder algorithmic items. All of that is intentional scope — see
 `results.md` for what I'd try next.
