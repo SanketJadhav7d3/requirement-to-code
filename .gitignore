@@ -1,0 +1,6 @@
+adapter/
+__pycache__/
+*.pyc
+.venv/
+wandb/
+*.log

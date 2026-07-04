@@ -1,0 +1,9 @@
+torch>=2.1
+transformers>=4.44
+peft>=0.11
+datasets>=2.19
+accelerate>=0.30
+# Only needed if you set use_qlora=True in config.py.
+# bitsandbytes ships official wheels for Linux and Windows (0.43+); it has no
+# CUDA build for macOS, so it's excluded there.
+bitsandbytes>=0.43 ; platform_system != "Darwin"
