@@ -19,7 +19,10 @@ def pick_dtype(device: str):
 @dataclass
 class Config:
     # --- model ---
-    model_name: str = "Qwen/Qwen2.5-Coder-0.5B"
+    # Plain (non-code) base: it starts weaker on code, which leaves real
+    # headroom for the LoRA fine-tune to show a before/after gap. Swap back to
+    # "Qwen/Qwen2.5-Coder-0.5B" for the already-code-specialized baseline.
+    model_name: str = "Qwen/Qwen2.5-0.5B"
     max_len: int = 512
 
     # --- data ---

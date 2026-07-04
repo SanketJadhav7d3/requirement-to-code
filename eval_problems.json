@@ -46,5 +46,101 @@
     "requirement": "Write a function gcd(a, b) that returns the greatest common divisor of two positive integers using the Euclidean algorithm.",
     "entry_point": "gcd",
     "tests": "assert gcd(12, 8) == 4\nassert gcd(17, 5) == 1\nassert gcd(100, 10) == 10"
+  },
+  {
+    "id": "reverse_string",
+    "requirement": "Write a function reverse_string(s) that returns the string s reversed.",
+    "entry_point": "reverse_string",
+    "tests": "assert reverse_string('hello') == 'olleh'\nassert reverse_string('') == ''\nassert reverse_string('a') == 'a'"
+  },
+  {
+    "id": "factorial",
+    "requirement": "Write a function factorial(n) that returns the factorial of a non-negative integer n, where factorial(0) is 1.",
+    "entry_point": "factorial",
+    "tests": "assert factorial(0) == 1\nassert factorial(5) == 120\nassert factorial(1) == 1"
+  },
+  {
+    "id": "is_prime",
+    "requirement": "Write a function is_prime(n) that returns True if the integer n is a prime number and False otherwise. Numbers less than 2 are not prime.",
+    "entry_point": "is_prime",
+    "tests": "assert is_prime(2) is True\nassert is_prime(15) is False\nassert is_prime(1) is False\nassert is_prime(13) is True"
+  },
+  {
+    "id": "fibonacci",
+    "requirement": "Write a function fibonacci(n) that returns the nth Fibonacci number, where fibonacci(0) is 0 and fibonacci(1) is 1.",
+    "entry_point": "fibonacci",
+    "tests": "assert fibonacci(0) == 0\nassert fibonacci(1) == 1\nassert fibonacci(10) == 55"
+  },
+  {
+    "id": "sum_list",
+    "requirement": "Write a function sum_list(nums) that returns the sum of all numbers in the list nums, returning 0 for an empty list.",
+    "entry_point": "sum_list",
+    "tests": "assert sum_list([1,2,3]) == 6\nassert sum_list([]) == 0\nassert sum_list([-1,1]) == 0"
+  },
+  {
+    "id": "max_subarray",
+    "requirement": "Write a function max_subarray(nums) that returns the largest sum of any contiguous subarray of the non-empty list nums.",
+    "entry_point": "max_subarray",
+    "tests": "assert max_subarray([-2,1,-3,4,-1,2,1,-5,4]) == 6\nassert max_subarray([1]) == 1\nassert max_subarray([-1,-2,-3]) == -1"
+  },
+  {
+    "id": "count_vowels",
+    "requirement": "Write a function count_vowels(s) that returns the number of vowels (a, e, i, o, u, case-insensitive) in the string s.",
+    "entry_point": "count_vowels",
+    "tests": "assert count_vowels('hello') == 2\nassert count_vowels('xyz') == 0\nassert count_vowels('AEIOU') == 5"
+  },
+  {
+    "id": "capitalize_words",
+    "requirement": "Write a function capitalize_words(s) that returns the string s with the first letter of each whitespace-separated word capitalized.",
+    "entry_point": "capitalize_words",
+    "tests": "assert capitalize_words('hello world') == 'Hello World'\nassert capitalize_words('') == ''\nassert capitalize_words('a b') == 'A B'"
+  },
+  {
+    "id": "remove_duplicates",
+    "requirement": "Write a function remove_duplicates(lst) that returns a list with duplicate elements removed, preserving the order of first appearance.",
+    "entry_point": "remove_duplicates",
+    "tests": "assert remove_duplicates([1,2,2,3,1]) == [1,2,3]\nassert remove_duplicates([]) == []\nassert remove_duplicates([1,1,1]) == [1]"
+  },
+  {
+    "id": "binary_search",
+    "requirement": "Write a function binary_search(nums, target) that returns the index of target in the ascending-sorted list nums, or -1 if it is not present.",
+    "entry_point": "binary_search",
+    "tests": "assert binary_search([1,2,3,4,5], 3) == 2\nassert binary_search([1,2,3], 4) == -1\nassert binary_search([], 1) == -1"
+  },
+  {
+    "id": "is_anagram",
+    "requirement": "Write a function is_anagram(a, b) that returns True if strings a and b are anagrams of each other, ignoring case.",
+    "entry_point": "is_anagram",
+    "tests": "assert is_anagram('listen', 'silent') is True\nassert is_anagram('hello', 'world') is False\nassert is_anagram('a', 'a') is True"
+  },
+  {
+    "id": "celsius_to_fahrenheit",
+    "requirement": "Write a function celsius_to_fahrenheit(c) that converts a temperature c in Celsius to Fahrenheit.",
+    "entry_point": "celsius_to_fahrenheit",
+    "tests": "assert celsius_to_fahrenheit(0) == 32\nassert celsius_to_fahrenheit(100) == 212\nassert celsius_to_fahrenheit(-40) == -40"
+  },
+  {
+    "id": "second_largest",
+    "requirement": "Write a function second_largest(nums) that returns the second largest distinct value in the list nums.",
+    "entry_point": "second_largest",
+    "tests": "assert second_largest([3,1,4,1,5]) == 4\nassert second_largest([10,20]) == 10\nassert second_largest([5,5,4]) == 4"
+  },
+  {
+    "id": "char_frequency",
+    "requirement": "Write a function char_frequency(s) that returns a dictionary mapping each character in the string s to how many times it appears.",
+    "entry_point": "char_frequency",
+    "tests": "assert char_frequency('aab') == {'a':2,'b':1}\nassert char_frequency('') == {}\nassert char_frequency('xxx') == {'x':3}"
+  },
+  {
+    "id": "rotate_list",
+    "requirement": "Write a function rotate_list(lst, k) that returns the list lst rotated to the right by k positions, where k is a non-negative integer that may exceed the list length.",
+    "entry_point": "rotate_list",
+    "tests": "assert rotate_list([1,2,3,4,5], 2) == [4,5,1,2,3]\nassert rotate_list([1,2,3], 3) == [1,2,3]\nassert rotate_list([1,2,3], 1) == [3,1,2]"
+  },
+  {
+    "id": "sum_digits",
+    "requirement": "Write a function sum_digits(n) that returns the sum of the decimal digits of a non-negative integer n.",
+    "entry_point": "sum_digits",
+    "tests": "assert sum_digits(123) == 6\nassert sum_digits(0) == 0\nassert sum_digits(9999) == 36"
   }
 ]
