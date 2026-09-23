@@ -27,7 +27,7 @@ class Config:
 
     # --- data ---
     dataset: str = "iamtarun/python_code_instructions_18k_alpaca"
-    train_size: int = 2000          # small on purpose; bump if you have time
+    train_size: int = 2000          
     seed: int = 42
 
     # --- LoRA ---

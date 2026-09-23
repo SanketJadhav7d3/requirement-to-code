@@ -28,7 +28,7 @@ you'd gate generated code in a real requirement-driven workflow.
 | `data.py` | Loads an instruction→code dataset; fixes the prompt format |
 | `train.py` | Hand-written PyTorch LoRA training loop (no `Trainer`) |
 | `evaluate.py` | Generates, runs tests in a sandboxed subprocess, scores pass@1 |
-| `eval_problems.json` | 24 held-out requirements + tests |
+| `eval_problems.json` | 60 held-out requirements + tests (easy → hard) |
 | `results.md` | Before/after table to fill in |
 
 ## Quickstart
@@ -78,7 +78,7 @@ The code is cross-platform — the same three commands work in PowerShell or
 
 ## Honest limitations
 
-Greedy `pass@1` on 24 toy problems is a smoke test, not a benchmark. The prompt
+Greedy `pass@1` on 60 toy problems is a smoke test, not a benchmark. The prompt
 tokens aren't masked from the loss (a known refinement). A 0.5B model will still
 miss the harder algorithmic items. All of that is intentional scope — see
 `results.md` for what I'd try next.

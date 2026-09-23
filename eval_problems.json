@@ -142,5 +142,221 @@
     "requirement": "Write a function sum_digits(n) that returns the sum of the decimal digits of a non-negative integer n.",
     "entry_point": "sum_digits",
     "tests": "assert sum_digits(123) == 6\nassert sum_digits(0) == 0\nassert sum_digits(9999) == 36"
+  },
+  {
+    "id": "is_even",
+    "requirement": "Write a function is_even(n) that returns True if the integer n is even and False otherwise.",
+    "entry_point": "is_even",
+    "tests": "assert is_even(4) is True\nassert is_even(7) is False\nassert is_even(0) is True\nassert is_even(-2) is True"
+  },
+  {
+    "id": "find_max",
+    "requirement": "Write a function find_max(nums) that returns the largest number in a non-empty list nums without using the built-in max.",
+    "entry_point": "find_max",
+    "tests": "assert find_max([3,1,4,1,5]) == 5\nassert find_max([-7,-2,-9]) == -2\nassert find_max([42]) == 42"
+  },
+  {
+    "id": "count_words",
+    "requirement": "Write a function count_words(s) that returns the number of whitespace-separated words in the string s.",
+    "entry_point": "count_words",
+    "tests": "assert count_words('hello world') == 2\nassert count_words('  one   two three ') == 3\nassert count_words('') == 0"
+  },
+  {
+    "id": "average",
+    "requirement": "Write a function average(nums) that returns the arithmetic mean of a list of numbers, or 0 if the list is empty.",
+    "entry_point": "average",
+    "tests": "assert average([1,2,3,4]) == 2.5\nassert average([]) == 0\nassert average([5]) == 5"
+  },
+  {
+    "id": "square_list",
+    "requirement": "Write a function square_list(nums) that returns a new list containing the square of each number in nums.",
+    "entry_point": "square_list",
+    "tests": "assert square_list([1,2,3]) == [1,4,9]\nassert square_list([]) == []\nassert square_list([-2]) == [4]"
+  },
+  {
+    "id": "filter_evens",
+    "requirement": "Write a function filter_evens(nums) that returns a list of only the even numbers in nums, preserving order.",
+    "entry_point": "filter_evens",
+    "tests": "assert filter_evens([1,2,3,4,5,6]) == [2,4,6]\nassert filter_evens([1,3]) == []\nassert filter_evens([0,-4,7]) == [0,-4]"
+  },
+  {
+    "id": "is_leap_year",
+    "requirement": "Write a function is_leap_year(year) that returns True if year is a leap year in the Gregorian calendar (divisible by 4, except centuries not divisible by 400).",
+    "entry_point": "is_leap_year",
+    "tests": "assert is_leap_year(2024) is True\nassert is_leap_year(1900) is False\nassert is_leap_year(2000) is True\nassert is_leap_year(2023) is False"
+  },
+  {
+    "id": "reverse_words",
+    "requirement": "Write a function reverse_words(s) that returns the words of the string s in reverse order, joined by single spaces.",
+    "entry_point": "reverse_words",
+    "tests": "assert reverse_words('the quick brown fox') == 'fox brown quick the'\nassert reverse_words('hello') == 'hello'\nassert reverse_words('  a  b ') == 'b a'"
+  },
+  {
+    "id": "power_of_two",
+    "requirement": "Write a function power_of_two(n) that returns True if the integer n is a positive power of two (1, 2, 4, 8, ...) and False otherwise.",
+    "entry_point": "power_of_two",
+    "tests": "assert power_of_two(1) is True\nassert power_of_two(16) is True\nassert power_of_two(18) is False\nassert power_of_two(0) is False"
+  },
+  {
+    "id": "list_product",
+    "requirement": "Write a function list_product(nums) that returns the product of all numbers in nums, returning 1 for an empty list.",
+    "entry_point": "list_product",
+    "tests": "assert list_product([1,2,3,4]) == 24\nassert list_product([]) == 1\nassert list_product([5,0,2]) == 0"
+  },
+  {
+    "id": "lcm",
+    "requirement": "Write a function lcm(a, b) that returns the least common multiple of two positive integers a and b.",
+    "entry_point": "lcm",
+    "tests": "assert lcm(4, 6) == 12\nassert lcm(7, 3) == 21\nassert lcm(5, 5) == 5"
+  },
+  {
+    "id": "count_occurrences",
+    "requirement": "Write a function count_occurrences(lst, x) that returns how many times the value x appears in the list lst.",
+    "entry_point": "count_occurrences",
+    "tests": "assert count_occurrences([1,2,2,3,2], 2) == 3\nassert count_occurrences([], 1) == 0\nassert count_occurrences(['a','b'], 'c') == 0"
+  },
+  {
+    "id": "run_length_encode",
+    "requirement": "Write a function run_length_encode(s) that compresses the string s by replacing each run of repeated characters with the character followed by the run length, e.g. 'aaabcc' -> 'a3b1c2'.",
+    "entry_point": "run_length_encode",
+    "tests": "assert run_length_encode('aaabcc') == 'a3b1c2'\nassert run_length_encode('') == ''\nassert run_length_encode('abc') == 'a1b1c1'\nassert run_length_encode('zzzz') == 'z4'"
+  },
+  {
+    "id": "valid_parentheses",
+    "requirement": "Write a function valid_parentheses(s) that returns True if the string s containing only the characters '()[]{}' has every bracket closed by the same type in the correct order.",
+    "entry_point": "valid_parentheses",
+    "tests": "assert valid_parentheses('()[]{}') is True\nassert valid_parentheses('([{}])') is True\nassert valid_parentheses('(]') is False\nassert valid_parentheses('([)]') is False\nassert valid_parentheses('((') is False\nassert valid_parentheses('') is True"
+  },
+  {
+    "id": "chunk_list",
+    "requirement": "Write a function chunk_list(lst, size) that splits the list lst into consecutive sublists of length size; the last chunk may be shorter.",
+    "entry_point": "chunk_list",
+    "tests": "assert chunk_list([1,2,3,4,5], 2) == [[1,2],[3,4],[5]]\nassert chunk_list([], 3) == []\nassert chunk_list([1,2,3], 3) == [[1,2,3]]"
+  },
+  {
+    "id": "int_to_binary",
+    "requirement": "Write a function int_to_binary(n) that returns the binary representation of a non-negative integer n as a string without any '0b' prefix.",
+    "entry_point": "int_to_binary",
+    "tests": "assert int_to_binary(5) == '101'\nassert int_to_binary(0) == '0'\nassert int_to_binary(255) == '11111111'"
+  },
+  {
+    "id": "caesar_cipher",
+    "requirement": "Write a function caesar_cipher(s, k) that shifts each letter in s forward by k positions in the alphabet, wrapping around from z to a and preserving case; non-letters are unchanged.",
+    "entry_point": "caesar_cipher",
+    "tests": "assert caesar_cipher('abc', 1) == 'bcd'\nassert caesar_cipher('xyz', 3) == 'abc'\nassert caesar_cipher('Hello, World!', 5) == 'Mjqqt, Btwqi!'\nassert caesar_cipher('a', 26) == 'a'"
+  },
+  {
+    "id": "merge_sorted",
+    "requirement": "Write a function merge_sorted(a, b) that merges two ascending sorted lists a and b into a single ascending sorted list.",
+    "entry_point": "merge_sorted",
+    "tests": "assert merge_sorted([1,3,5], [2,4,6]) == [1,2,3,4,5,6]\nassert merge_sorted([], [1,2]) == [1,2]\nassert merge_sorted([1,1], [1]) == [1,1,1]"
+  },
+  {
+    "id": "missing_number",
+    "requirement": "Write a function missing_number(nums) that, given a list containing n distinct numbers taken from the range 0..n, returns the one number in that range missing from the list.",
+    "entry_point": "missing_number",
+    "tests": "assert missing_number([3,0,1]) == 2\nassert missing_number([0,1]) == 2\nassert missing_number([1]) == 0\nassert missing_number([9,6,4,2,3,5,7,0,1]) == 8"
+  },
+  {
+    "id": "transpose",
+    "requirement": "Write a function transpose(matrix) that returns the transpose of a rectangular matrix given as a list of lists.",
+    "entry_point": "transpose",
+    "tests": "assert transpose([[1,2,3],[4,5,6]]) == [[1,4],[2,5],[3,6]]\nassert transpose([[1]]) == [[1]]\nassert transpose([[1,2]]) == [[1],[2]]"
+  },
+  {
+    "id": "group_anagrams",
+    "requirement": "Write a function group_anagrams(words) that groups the given words into lists of anagrams; each group should be sorted alphabetically and the list of groups sorted by its first element.",
+    "entry_point": "group_anagrams",
+    "tests": "assert group_anagrams(['eat','tea','tan','ate','nat','bat']) == [['ate','eat','tea'],['bat'],['nat','tan']]\nassert group_anagrams([]) == []\nassert group_anagrams(['a']) == [['a']]"
+  },
+  {
+    "id": "longest_common_prefix",
+    "requirement": "Write a function longest_common_prefix(strs) that returns the longest string that is a prefix of every string in the list strs, or '' if there is none or the list is empty.",
+    "entry_point": "longest_common_prefix",
+    "tests": "assert longest_common_prefix(['flower','flow','flight']) == 'fl'\nassert longest_common_prefix(['dog','racecar','car']) == ''\nassert longest_common_prefix([]) == ''\nassert longest_common_prefix(['same']) == 'same'"
+  },
+  {
+    "id": "digital_root",
+    "requirement": "Write a function digital_root(n) that repeatedly sums the digits of a non-negative integer n until a single digit remains, and returns that digit.",
+    "entry_point": "digital_root",
+    "tests": "assert digital_root(16) == 7\nassert digital_root(942) == 6\nassert digital_root(0) == 0\nassert digital_root(9) == 9"
+  },
+  {
+    "id": "is_sorted",
+    "requirement": "Write a function is_sorted(nums) that returns True if the list nums is sorted in non-decreasing order and False otherwise.",
+    "entry_point": "is_sorted",
+    "tests": "assert is_sorted([1,2,2,3]) is True\nassert is_sorted([3,1]) is False\nassert is_sorted([]) is True"
+  },
+  {
+    "id": "longest_unique_substring",
+    "requirement": "Write a function longest_unique_substring(s) that returns the length of the longest substring of s that contains no repeating characters.",
+    "entry_point": "longest_unique_substring",
+    "tests": "assert longest_unique_substring('abcabcbb') == 3\nassert longest_unique_substring('bbbbb') == 1\nassert longest_unique_substring('pwwkew') == 3\nassert longest_unique_substring('') == 0"
+  },
+  {
+    "id": "int_to_roman",
+    "requirement": "Write a function int_to_roman(n) that converts an integer n between 1 and 3999 into its Roman numeral string.",
+    "entry_point": "int_to_roman",
+    "tests": "assert int_to_roman(3) == 'III'\nassert int_to_roman(58) == 'LVIII'\nassert int_to_roman(1994) == 'MCMXCIV'\nassert int_to_roman(4) == 'IV'"
+  },
+  {
+    "id": "climb_stairs",
+    "requirement": "Write a function climb_stairs(n) that returns the number of distinct ways to climb a staircase of n steps when each move climbs either 1 or 2 steps.",
+    "entry_point": "climb_stairs",
+    "tests": "assert climb_stairs(1) == 1\nassert climb_stairs(2) == 2\nassert climb_stairs(5) == 8\nassert climb_stairs(10) == 89"
+  },
+  {
+    "id": "coin_change",
+    "requirement": "Write a function coin_change(coins, amount) that returns the fewest number of coins from the denominations in coins needed to make up amount, or -1 if it cannot be made.",
+    "entry_point": "coin_change",
+    "tests": "assert coin_change([1,2,5], 11) == 3\nassert coin_change([2], 3) == -1\nassert coin_change([1], 0) == 0\nassert coin_change([3,7], 14) == 2"
+  },
+  {
+    "id": "lis_length",
+    "requirement": "Write a function lis_length(nums) that returns the length of the longest strictly increasing subsequence of the list nums.",
+    "entry_point": "lis_length",
+    "tests": "assert lis_length([10,9,2,5,3,7,101,18]) == 4\nassert lis_length([0,1,0,3,2,3]) == 4\nassert lis_length([7,7,7]) == 1\nassert lis_length([]) == 0"
+  },
+  {
+    "id": "edit_distance",
+    "requirement": "Write a function edit_distance(a, b) that returns the minimum number of single-character insertions, deletions, or substitutions required to turn string a into string b.",
+    "entry_point": "edit_distance",
+    "tests": "assert edit_distance('kitten', 'sitting') == 3\nassert edit_distance('', 'abc') == 3\nassert edit_distance('horse', 'ros') == 3\nassert edit_distance('same', 'same') == 0"
+  },
+  {
+    "id": "primes_up_to",
+    "requirement": "Write a function primes_up_to(n) that returns a list of all prime numbers less than or equal to n, in ascending order.",
+    "entry_point": "primes_up_to",
+    "tests": "assert primes_up_to(10) == [2,3,5,7]\nassert primes_up_to(1) == []\nassert primes_up_to(2) == [2]\nassert primes_up_to(30) == [2,3,5,7,11,13,17,19,23,29]"
+  },
+  {
+    "id": "permutations",
+    "requirement": "Write a function permutations(lst) that returns a list of all permutations of the distinct elements in lst, each as a list, sorted in lexicographic order.",
+    "entry_point": "permutations",
+    "tests": "assert permutations([1,2,3]) == [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]\nassert permutations([1]) == [[1]]\nassert permutations([]) == [[]]"
+  },
+  {
+    "id": "matrix_multiply",
+    "requirement": "Write a function matrix_multiply(a, b) that returns the matrix product of a and b, both given as lists of lists with compatible dimensions.",
+    "entry_point": "matrix_multiply",
+    "tests": "assert matrix_multiply([[1,2],[3,4]], [[5,6],[7,8]]) == [[19,22],[43,50]]\nassert matrix_multiply([[1,2,3]], [[1],[2],[3]]) == [[14]]\nassert matrix_multiply([[2]], [[3]]) == [[6]]"
+  },
+  {
+    "id": "spiral_order",
+    "requirement": "Write a function spiral_order(matrix) that returns the elements of a rectangular matrix in clockwise spiral order starting from the top-left.",
+    "entry_point": "spiral_order",
+    "tests": "assert spiral_order([[1,2,3],[4,5,6],[7,8,9]]) == [1,2,3,6,9,8,7,4,5]\nassert spiral_order([[1,2,3,4],[5,6,7,8],[9,10,11,12]]) == [1,2,3,4,8,12,11,10,9,5,6,7]\nassert spiral_order([[1]]) == [1]\nassert spiral_order([]) == []"
+  },
+  {
+    "id": "top_k_frequent",
+    "requirement": "Write a function top_k_frequent(nums, k) that returns the k most frequent elements of nums, ordered from most to least frequent, breaking ties by the smaller value first.",
+    "entry_point": "top_k_frequent",
+    "tests": "assert top_k_frequent([1,1,1,2,2,3], 2) == [1,2]\nassert top_k_frequent([4,4,5,5,6], 2) == [4,5]\nassert top_k_frequent([7], 1) == [7]"
+  },
+  {
+    "id": "balanced_split",
+    "requirement": "Write a function balanced_split(nums) that returns True if the list of non-negative integers nums can be partitioned into two subsets with equal sums, and False otherwise.",
+    "entry_point": "balanced_split",
+    "tests": "assert balanced_split([1,5,11,5]) is True\nassert balanced_split([1,2,3,5]) is False\nassert balanced_split([]) is True\nassert balanced_split([2,2]) is True"
   }
 ]
